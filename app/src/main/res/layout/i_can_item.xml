@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/ICanLayout"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/labelForSell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Я могу " />
+
+        <Spinner
+            android:id="@+id/spinnerICan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:backgroundTint="@null"/>
+
+        <EditText
+            android:id="@+id/edTxtSell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="торт" />
+    </LinearLayout>
+</RelativeLayout>

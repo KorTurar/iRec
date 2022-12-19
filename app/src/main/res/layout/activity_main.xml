@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/root"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/navBar"
+        android:id="@+id/search">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/perfSearch_bar_relativeLayout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/search_LinearLayout"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="95"
+                    android:background="@null"
+                    android:hint="услуга или предмет"
+                    android:padding="15dp"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/searchPerfsImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:padding="15dp"
+                    android:src="@android:drawable/ic_menu_search" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/perfRecyclerView_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/perfSearch_bar_relativeLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="200dp"
+                android:text="Вы ещё ничего не ввели"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/perfRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"/>
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+<!--    <com.example.irec.MyCanvas-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1000dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/myCanvas"/>-->
+
+
+   <!-- <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recView"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Schedule"/>
+
+    <Button
+        android:id="@+id/btnScheduleStop"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSchedule"
+        android:layout_centerHorizontal="true"
+        android:text="Stop" />
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navBar"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profile_icon"
+            android:layout_weight="33"
+            android:id="@+id/profileImV"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/search_icon"
+            android:layout_weight="33"
+            android:id="@+id/searchImV"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="34"
+            android:src="@drawable/list_icon"
+            android:id="@+id/listsImV"/>
+    </LinearLayout>
+</RelativeLayout>

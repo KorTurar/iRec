@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekContactRelLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_LinearLayout"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="95"
+                android:background="@null"
+                android:hint="имя или номер"
+                android:padding="10dp"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/searchPerfsImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@null"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_search" />
+
+        </LinearLayout>
+    </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            android:layout_below="@id/seekContactRelLayout">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayoutForScroll">
+                <RelativeLayout
+                    android:id="@+id/dialedPerfsRelLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/dialedContactsLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Набранные:" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dialedPerfsRecView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dialedContactsLabel"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/savedPerfsRelLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialedPerfsRelLayout"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/savedContactsLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Сохранённые:" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/savedPerfsRecView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/savedContactsLabel"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navBar"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/profileImV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="33"
+            android:src="@drawable/profile_icon" />
+
+        <ImageView
+            android:id="@+id/searchImV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="33"
+            android:src="@drawable/search_icon" />
+
+        <ImageView
+            android:id="@+id/listsImV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="34"
+            android:src="@drawable/list_icon" />
+    </LinearLayout>
+</RelativeLayout>

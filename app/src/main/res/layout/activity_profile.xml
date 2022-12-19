@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:id="@+id/profileScroll">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayoutForScroll">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/myNeededProfileDataLayout">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="50dp"
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/myImageCardView"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true">
+                    <ImageView
+                        android:id="@+id/myImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+
+                        android:src="@drawable/random_photo"/>
+                    </androidx.cardview.widget.CardView>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Сделать фото"
+                        android:layout_below="@id/myImageCardView"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/takePhotoBtn"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/takePhotoBtn"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/myNumberLinearLayout">
+                        <TextView
+                            android:id="@+id/myNumberLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Мой номер:  +7"/>
+
+                        <EditText
+                            android:id="@+id/edTxtMyNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:hint="7772378594" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/myFNameLinearLayout"
+                        android:layout_below="@id/myNumberLinearLayout">
+                        <TextView
+                            android:id="@+id/myFName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Имя: " />
+                        <EditText
+                            android:id="@+id/edTxtMyFName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:hint="Ержан" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/myLNameLinearLayout"
+                        android:layout_below="@+id/myFNameLinearLayout">
+                        <TextView
+                            android:id="@+id/myLName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Фамилия: " />
+                        <EditText
+                            android:id="@+id/edTxtMyLName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:hint="Егизбаев" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/BirthDateANdSexLinearLayout"
+                        android:layout_below="@id/myLNameLinearLayout"
+                        android:layout_margin="10dp">
+                        <TextView
+                            android:id="@+id/myBithDateLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="День рождения: "
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/myBirthDate"
+                            android:text="10 | 12 | 1990"
+                            android:textColor="#f28827"
+                            />
+
+                    </LinearLayout>
+                    <RadioGroup
+                        android:id="@+id/SexRadioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/BirthDateANdSexLinearLayout"
+                        android:layout_centerHorizontal="true">
+                        <RadioButton
+                            android:id="@+id/male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Мужчина"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Женьщина"/>
+                    </RadioGroup>
+                </RelativeLayout>
+                <CheckBox
+                    android:id="@+id/checkICan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Я могу ..."
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/myNeededProfileDataLayout"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ICanLayoutContainer"
+                    android:layout_below="@id/checkICan"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/abilities">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:id="@+id/abilitiesLinearLayout"
+                                android:gravity="center">
+
+
+                            </LinearLayout>
+                    </RelativeLayout>
+                    <ImageButton
+                        android:id="@+id/addAbilityBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_menu_add"
+                        android:background="@null"
+                        android:layout_below="@id/abilities"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"/>
+
+
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/sendFirstDataBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Отправить"
+                    android:layout_below="@id/ICanLayoutContainer"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+
+            android:background="@color/purple_200">
+
+            <ImageView
+                android:id="@+id/profileImV"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="33"
+                android:src="@drawable/profile_icon" />
+
+            <ImageView
+                android:id="@+id/searchImV"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="33"
+                android:src="@drawable/search_icon" />
+
+            <ImageView
+                android:id="@+id/listsImV"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="34"
+                android:src="@drawable/list_icon" />
+        </LinearLayout>
+
+
+</LinearLayout>
